@@ -1,0 +1,130 @@
+.navbar {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  background-color: var(--body-color);
+  z-index: 99;
+  padding-bottom: 1rem;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  z-index: 9999999999999;
+
+  &__inner {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    text-decoration: none;
+    width: fit-content;
+    padding-left: 0;
+    color: var(--title-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: var(--title-color-dark);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    width: fit-content;
+    margin-left: 1.8rem;
+    margin-bottom: 0;
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+    font-weight: 400;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--title-color-dark);
+    }
+  }
+
+  &__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: 2.4rem;
+    padding-top: 4rem;
+    padding-bottom: 1.2rem;
+    background-color: var(--container-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 32px 32px 0 0;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--text-color);
+      opacity: 0.48;
+    }
+  }
+
+  &__close {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin: 0;
+    padding: 0.4rem;
+    border-radius: 10px;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--title-color);
+    font-weight: 400;
+    color: var(--title-color);
+    display: none;
+  }
+}
+
+.activeLink {
+  color: var(--title-color);
+}
+
+@media only screen and (max-width: 760px) {
+  .navbar {
+    &__inner {
+      width: 87vw;
+    }
+
+    &__link {
+      width: 8rem;
+      margin-left: 0;
+      margin-bottom: 1.2rem;
+    }
+
+    &__close {
+      display: flex;
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+}
