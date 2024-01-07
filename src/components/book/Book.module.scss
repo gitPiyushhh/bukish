@@ -1,6 +1,6 @@
 .book {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width: 26%;
+    width: 28%;
     padding: 1.6rem;
     margin-bottom: 1.2rem;
     display: flex;
@@ -25,6 +25,7 @@
 
     &__container {
         width: 100%;
+        margin-top: 1.6rem;
         display: flex;
         justify-content: space-between;
         align-items: center;

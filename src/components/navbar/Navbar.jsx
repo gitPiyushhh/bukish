@@ -23,12 +23,20 @@ function Navbar() {
         </div>
 
         <div className={styles.navbar__right}>
-          <Link to="/allBooks" className={styles.navbar__link}>
-            <p style={{marginBottom: '0'}}>All books </p>
+          <Link to="/books" className={styles.navbar__link}>
+            <p style={{marginBottom: '0'}}>Books </p>
           </Link>
 
-          <Link to="/addBook" className={styles.navbar__link}>
+          <Link to="/users" className={styles.navbar__link}>
+            <p style={{marginBottom: '0'}}>Users</p>
+          </Link>
+
+          <Link to="/books/new" className={styles.navbar__link}>
             <p style={{marginBottom: '0'}}>Add book</p>
+          </Link>
+          
+          <Link to="/users/new" className={styles.navbar__link}>
+            <p style={{marginBottom: '0'}}>Add user</p>
           </Link>
         </div>
 
@@ -46,15 +54,13 @@ function Navbar() {
 
       {isOpen && (
         <div className={styles.navbar__bottom}>
-          <p className={styles.navbar__link}>
-            <i className="uil uil-estate" style={{ marginRight: "4px" }}></i>{" "}
-            Books
-          </p>
+          <Link to="/books" className={styles.navbar__link}>
+            <p style={{marginBottom: '0'}}>All books </p>
+          </Link>
 
-          <p className={styles.navbar__link}>
-            <i className="uil uil-user" style={{ marginRight: "4px" }}></i>{" "}
-            Author
-          </p>
+          <Link to="/books/new" className={styles.navbar__link}>
+            <p style={{marginBottom: '0'}}>Add book</p>
+          </Link>
         </div>
       )}
     </div>

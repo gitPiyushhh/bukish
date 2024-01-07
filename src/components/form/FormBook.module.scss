@@ -1,5 +1,5 @@
 .form {
-  width: 50%;
+  width: 100%;
   margin: 11rem auto;
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,7 @@
     background-position: top;
     background-size: cover !important;
     background-repeat: no-repeat;
-    background: url('../../../public/book.avif');
+    background: url('../../../public/Book\ new.jpeg');
   }
 
   &__right {
@@ -27,6 +27,9 @@
 
   &__cta {
     padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.913);
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
   }
 }
@@ -36,6 +39,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  
 
   &__label {
       font-size: 1.2rem;
@@ -46,5 +50,16 @@
   &__input {
       padding: 1.2rem;
       margin-bottom: 2rem;
+      border:1px solid rgba(0, 0, 0, 0.715) ;
+      border-radius: 5px;
   }
+}
+
+.formUser {
+  width: 44%;
+  height: 40vh;
+  background-position: top;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background: url('../../../public/signup.avif');
 }

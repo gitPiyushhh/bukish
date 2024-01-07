@@ -1,1 +1,1 @@
-// Redux logic for Global UI state
+// Redux logic for Global UI statek

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { redirect } from "react-router-dom";
 
 /*
   State
@@ -10,7 +11,7 @@ const initialState = {
       description: "Description metadata here..",
       author: "Jonas",
       price: 1000,
-    }
+    },
   ],
   name: "",
   description: "",
@@ -55,13 +56,19 @@ const bookSlice = createSlice({
         state.allBooks = [...state.allBooks, newBook];
       },
     },
+
+    deleteBook(state, action) {
+      state.allBooks = state.allBooks.filter(
+        (el) => el.name !== action.payload.name
+      );
+    },
   },
 });
 
 /*
   Action creators
 */
-export const { addBook } = bookSlice.actions;
+export const { addBook, deleteBook } = bookSlice.actions;
 
 /*
   Reducer
